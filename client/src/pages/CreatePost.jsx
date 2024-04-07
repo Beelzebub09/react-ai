@@ -51,7 +51,7 @@ const CreatePost = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto -mt-4">
       <div>
         <h1
           className="font-extrabold
@@ -67,7 +67,7 @@ const CreatePost = () => {
         </p>
       </div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-4 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
           <FormField
             labelName="Your Name"
@@ -90,7 +90,7 @@ const CreatePost = () => {
 
           <div
             className="relative bg-gray-50 border border-gray-300 text-gray-900 
-          text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64
+          text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-96 p-3 h-96
           flex justify-center items-center"
           >
             {form.photo ? (
@@ -122,20 +122,20 @@ const CreatePost = () => {
             type="button"
             onClick={generateImage}
             className="text-white bg-green-700 font-medium rounded-md
-            text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            text-xl w-full sm:w-auto px-7 py-4 text-center"
           >
             {generatingImg ? "Generating..." : "Generate"}
           </button>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-4">
           <p className="mt-2 text-[#666e75] text-[14px]">
             Would you like to share this image?
           </p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium
-          rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          rounded-md text-lg w-full sm:w-auto px-8 py-3 text-center"
           >
             {loading ? "Sharing..." : "Share with others"}
           </button>
